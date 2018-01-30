@@ -77,7 +77,8 @@ for date in unique_dates:
     
     #### Append speeches to gensim training data
 
-    for index, speech in enumerate(gov_speeches):        rows_list_gensim.append({'id':(date.strftime("%d-%m-%Y") + "-G-" + str(index)),'text':speech,'speechdate':date,'gov':True,'opp':False})
+    for index, speech in enumerate(gov_speeches):
+        rows_list_gensim.append({'id':(date.strftime("%d-%m-%Y") + "-G-" + str(index)),'text':speech,'speechdate':date,'gov':True,'opp':False})
         
     for index, speech in enumerate(opp_speeches):
         rows_list_gensim.append({'id':(date.strftime("%d-%m-%Y") + "-O-" + str(index)),'text':speech,'speechdate':date,'gov':False,'opp':True})
